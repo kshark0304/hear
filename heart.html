@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device" />
+        <meta http-equiv="X-UA-Compatible" content="width=device" />
+        <title>Static Template</title>
+    </head>
+        <style>
+            body{
+                margin :0;
+                padding:0;
+                background:#0b1522;
+                display: flex;
+                align-items: center;
+                min-height: 100vh;
+
+            }
+            .heart{
+                cursor: pointer;
+                margin: 100px;
+                height: 70px;
+                width: 70px;
+                background:#f20044 ;
+                position: relative;
+                transform: rotate(-45deg);
+                box-shadow: -10px 10px 90px #f20044;
+                animation: heart 0.6s linear infinite;
+            }
+            .heart:before{
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background: #f20044;
+                top:-50%;
+                border-radius: 50px;
+                box-shadow: -10px -10px 90px #f20044;
+            }
+            .heart::after{
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background: #f20044;
+                right:-50%;
+                border-radius: 50px;
+                box-shadow: 10px 10px 90px #f20044;
+            }
+            </style>
+    <body>
+        <div class="heart"></div>
+    </body>
+</html>
